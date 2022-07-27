@@ -15,29 +15,14 @@ Console.Write("Enter number c: ");
 
 number_c = int.Parse(Console.ReadLine());
 
-if (number_a> number_b)
-{
-    
-    if (number_a>number_c)
-    
-    {
-        Console.WriteLine($"max = {number_a}");
-    }
-    
-    else
-    {
-        Console.WriteLine($"max = {number_c}");
-    }
-}
-else if (number_a< number_b)
-{
-    if (number_b>number_c)
-    {
-        Console.WriteLine($"max = {number_b}");
-    }
-    else
-    {
-        Console.WriteLine($"max = {number_c}");
-    }
-}
+int max_number = number_a;
 
+if (number_b> max_number)
+{
+        max_number = number_b;
+}
+if (number_c> max_number)   
+   {
+    max_number = number_c;
+   }
+Console.WriteLine($"max = {max_number}");
